@@ -37,9 +37,6 @@ def search():
     cho=input("Enter title or year of the movie, please: ")
     choUp=cho.upper()
     
-    #cursor = conn.execute("SELECT NAME, PHONE, LAST FROM NAMES WHERE NAME = ? OR \
-    #LAST = ? OR PHONE = ?", [cho,cho,cho])
-
     cursor = conn.execute("SELECT * FROM NAMES WHERE upper(NAME) GLOB '*%s*' \
     OR upper(YEAR) GLOB '*%s*' ORDER BY YEAR ASC" % (choUp,choUp))
     
