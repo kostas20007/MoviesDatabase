@@ -59,7 +59,7 @@ def enterNew():
     
     while len(n) < 1:
 
-        n=input("Enter title of movie: ")
+        n=input("Enter Title of movie: ")
         
             
     while len(y) < 1:
@@ -157,13 +157,13 @@ def edit():
         elif element=='2':
             nameNew=input("Enter new Title for the movie: ")
             conn.execute("UPDATE NAMES set NAME = ? where ID = ?",[nameNew,idcont])
-            print("Title of the Movie changed")
+            print("Title of the Movie has changed")
             callMenu(conn)
                 
         elif element=='3':
             yearNew=input("Enter new Year for the movie: ")
             conn.execute("UPDATE NAMES set YEAR = ? where ID = ?",[yearNew,idcont])
-            print("Year of the movie changed")
+            print("Year of the movie has changed")
             callMenu(conn)
         
         elif element=='4':
